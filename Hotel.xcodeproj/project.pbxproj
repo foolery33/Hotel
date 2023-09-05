@@ -80,6 +80,8 @@
 			dependencies = (
 			);
 			name = Hotel;
+			packageProductDependencies = (
+			);
 			productName = Hotel;
 			productReference = 84E1C8412AA71EAA00B15D5B /* Hotel.app */;
 			productType = "com.apple.product-type.application";
@@ -108,6 +110,8 @@
 				Base,
 			);
 			mainGroup = 84E1C8382AA71EAA00B15D5B;
+			packageReferences = (
+			);
 			productRefGroup = 84E1C8422AA71EAA00B15D5B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
