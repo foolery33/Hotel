@@ -32,7 +32,7 @@ struct HotelScreenView: View {
                         VStack(alignment: .leading, spacing: 0) {
                             GeneralNavigationBar(
                                 leftView: {},
-                                text: "Отель"
+                                text: R.string.localizable.hotel()
                             )
                             ImageCarouselView(imageUrls: viewModel.hotel.imageUrls)
                             Spacer()
@@ -64,7 +64,7 @@ struct HotelScreenView: View {
                             Spacer()
                                 .frame(height: 16)
                             HStack(alignment: .firstTextBaseline, spacing: 8) {
-                                Text("от \(formatPrice(viewModel.hotel.minimalPrice)) ₽")
+                                Text(R.string.localizable.from_price(viewModel.hotel.minimalPrice.formatToPrice()))
                                     .font(AppFonts.semibold30)
                                     .foregroundColor(AppColors.black.swiftUIColor)
                                     .fixedSize()
@@ -157,7 +157,8 @@ struct HotelScreenView: View {
                         cornerRadius: 15,
                         verticalPadding: 15
                     )
-                    .padding()
+                    .padding(.vertical, 12)
+                    .padding(.horizontal, 16)
                     .background(AppColors.white.swiftUIColor)
                 }
             }
@@ -165,15 +166,6 @@ struct HotelScreenView: View {
         .onAppear {
             viewModel.viewDidAppear()
         }
-    }
-
-    // MARK: - Private Methods
-
-    private func formatPrice(_ price: Int) -> String {
-        let formatter = NumberFormatter()
-        formatter.numberStyle = .decimal
-        formatter.groupingSeparator = " "
-        return formatter.string(from: NSNumber(value: price)) ?? ""
     }
 }
 

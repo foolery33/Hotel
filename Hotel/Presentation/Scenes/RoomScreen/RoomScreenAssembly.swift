@@ -9,7 +9,8 @@ import SwiftUI
 
 enum RoomScreenAssembly {
     static func make(
-        with sceneDelegate: RoomScreenSceneDelegate
+        with sceneDelegate: RoomScreenSceneDelegate,
+        hotelName: String
     ) -> UIHostingController<RoomScreenView> {
         let viewModel = RoomScreenViewModel(
             dependencies: .init(
@@ -17,6 +18,7 @@ enum RoomScreenAssembly {
             )
         )
         viewModel.sceneDelegate = sceneDelegate
+        viewModel.hotelName = hotelName
 
         let viewController = UIHostingController(
             rootView: RoomScreenView(

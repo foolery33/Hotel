@@ -35,4 +35,11 @@ final class RepositoryProvider {
         )
     }()
 
+    lazy var bookingRepository: BookingRepository = {
+        BookingRepositoryImpl(
+            bookingService: networkServiceProvider.bookingService,
+            bookingMapper: .init()
+        )
+    }()
+
 }

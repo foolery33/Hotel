@@ -26,6 +26,9 @@ struct GeneralNavigationBar<Content: View>: View {
                 .font(AppFonts.medium18)
                 .foregroundColor(AppColors.black.swiftUIColor)
                 .frame(maxWidth: .infinity, alignment: .center)
+                .lineLimit(1)
+                .padding(.leading, 40)
+                .padding(.trailing, 40)
         }
         .padding(.bottom, 16)
         .padding(.top, 19)

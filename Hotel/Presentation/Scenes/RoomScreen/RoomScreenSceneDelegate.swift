@@ -8,6 +8,6 @@
 import Foundation
 
 protocol RoomScreenSceneDelegate: AnyObject {
-    func goToBookingScreen()
+    func goToBookingScreen(hotelName: String)
     func goBackToHotelScreen()
 }

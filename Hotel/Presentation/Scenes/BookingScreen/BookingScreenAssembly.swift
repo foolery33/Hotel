@@ -9,12 +9,18 @@ import SwiftUI
 
 enum BookingScreenAssembly {
     static func make(
-        with sceneDelegate: BookingScreenSceneDelegate
+        with sceneDelegate: BookingScreenSceneDelegate,
+        hotelName: String
     ) -> UIHostingController<BookingScreenView> {
         let viewModel = BookingScreenViewModel(
-            dependencies: .init()
+            dependencies: .init(
+                getBookingInformationUseCase: UseCaseProvider.instance.getBookingInformationUseCase,
+                validatePhoneNumberUseCase: UseCaseProvider.instance.validatePhoneNumberUseCase,
+                emailValidationUseCase: UseCaseProvider.instance.emailValidationUseCase
+            )
         )
         viewModel.sceneDelegate = sceneDelegate
+        viewModel.hotelName = hotelName
 
         let viewController = UIHostingController(
             rootView: BookingScreenView(

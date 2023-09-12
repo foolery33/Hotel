@@ -78,8 +78,8 @@ struct RoomView: View {
                     })
                     Spacer()
                         .frame(height: 16)
-                    HStack(spacing: 8) {
-                        Text("\(formatPrice(room.price)) ₽")
+                    HStack(alignment: .firstTextBaseline, spacing: 8) {
+                        Text("\(room.price.formatToPrice()) ₽")
                             .font(AppFonts.semibold30)
                             .foregroundColor(AppColors.black.swiftUIColor)
                             .fixedSize()
@@ -112,15 +112,6 @@ struct RoomView: View {
                 )
             }
         }
-    }
-    
-    // MARK: - Private Methods
-
-    private func formatPrice(_ price: Int) -> String {
-        let formatter = NumberFormatter()
-        formatter.numberStyle = .decimal
-        formatter.groupingSeparator = " "
-        return formatter.string(from: NSNumber(value: price)) ?? ""
     }
 }
 

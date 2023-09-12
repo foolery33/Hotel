@@ -27,9 +27,10 @@ struct RoomScreenView: View {
                                 viewModel.goBackToHotelScreen()
                             }, label: {
                                 Image(uiImage: AppImages.chevronLeft)
+                                    .foregroundColor(AppColors.black.swiftUIColor)
                             })
                         },
-                        text: "asfsdsdfsdf"
+                        text: viewModel.hotelName
                     )
                     LazyVStack(spacing: 0) {
                         ForEach(viewModel.roomList) { room in

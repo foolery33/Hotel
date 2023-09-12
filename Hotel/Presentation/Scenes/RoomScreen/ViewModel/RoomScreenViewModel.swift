@@ -12,7 +12,8 @@ final class RoomScreenViewModel: ObservableObject {
     // MARK: - Public Properties
 
     public weak var sceneDelegate: RoomScreenSceneDelegate?
-    
+
+    @Published public var hotelName: String = .init()
     @Published public var roomList: [RoomDomain] = .init()
     @Published public var error: String = ""
     @Published public var isLoading: Bool = false
@@ -34,7 +35,7 @@ final class RoomScreenViewModel: ObservableObject {
     }
 
     public func goToBookingScreen() {
-        sceneDelegate?.goToBookingScreen()
+        sceneDelegate?.goToBookingScreen(hotelName: hotelName)
     }
 
     public func goBackToHotelScreen() {

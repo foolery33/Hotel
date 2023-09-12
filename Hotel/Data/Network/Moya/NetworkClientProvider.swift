@@ -33,6 +33,10 @@ final class NetworkClientProvider {
         makeClient(endpoint: RoomEndpoint.self)
     }()
 
+    lazy var bookingClient: MoyaProvider<BookingEndpoint> = {
+        makeClient(endpoint: BookingEndpoint.self)
+    }()
+
     // MARK: - Private Methods
 
     private func makeClient<T>(endpoint: T.Type) -> MoyaProvider<T> where T: TargetType {

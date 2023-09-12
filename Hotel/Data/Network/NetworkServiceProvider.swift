@@ -23,4 +23,8 @@ final class NetworkServiceProvider {
         RoomServiceImpl(client: networkClientProvider.roomClient)
     }()
 
+    lazy var bookingService: BookingService = {
+        BookingServiceImpl(client: networkClientProvider.bookingClient)
+    }()
+
 }

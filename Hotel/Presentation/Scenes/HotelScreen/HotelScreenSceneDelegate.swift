@@ -6,5 +6,5 @@
 //
 
 protocol HotelScreenSceneDelegate: AnyObject {
-    func goToRoomScreen()
+    func goToRoomScreen(hotelName: String)
 }

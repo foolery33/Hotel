@@ -34,7 +34,7 @@ final class HotelScreenViewModel: ObservableObject {
     }
 
     public func goToRoomScreen() {
-        sceneDelegate?.goToRoomScreen()
+        sceneDelegate?.goToRoomScreen(hotelName: hotel.name)
     }
 
     // MARK: - Private Methods

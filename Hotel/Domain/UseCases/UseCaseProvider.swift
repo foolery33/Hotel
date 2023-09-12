@@ -31,4 +31,16 @@ final class UseCaseProvider {
         .init(roomRepository: repositoryProvider.roomRepository)
     }()
 
+    lazy var getBookingInformationUseCase: GetBookingInformationUseCase = {
+        .init(bookingRepository: repositoryProvider.bookingRepository)
+    }()
+
+    lazy var validatePhoneNumberUseCase: ValidatePhoneNumberUseCase = {
+        .init()
+    }()
+
+    lazy var emailValidationUseCase: EmailValidationUseCase = {
+        .init()
+    }()
+
 }

@@ -12,7 +12,7 @@ final class HotelCoordinator: BaseNavigationCoordinator {
     // MARK: - Start
 
     override func start() {
-        startHotelScreen()
+        startBookingScreen(hotelName: "Steigenberger Makadi")
     }
 
     // MARK: - Private Methods
@@ -23,14 +23,20 @@ final class HotelCoordinator: BaseNavigationCoordinator {
         navigationController.setViewControllers([viewController], animated: true)
     }
 
-    private func startRoomScreen() {
-        let viewController = RoomScreenAssembly.make(with: self)
+    private func startRoomScreen(hotelName: String) {
+        let viewController = RoomScreenAssembly.make(
+            with: self,
+            hotelName: hotelName
+        )
 
         navigationController.pushViewController(viewController, animated: true)
     }
 
-    private func startBookingScreen() {
-        let viewController = BookingScreenAssembly.make(with: self)
+    private func startBookingScreen(hotelName: String) {
+        let viewController = BookingScreenAssembly.make(
+            with: self,
+            hotelName: hotelName
+        )
 
         navigationController.pushViewController(viewController, animated: true)
     }
@@ -47,16 +53,16 @@ final class HotelCoordinator: BaseNavigationCoordinator {
 // MARK: - HotelScreenSceneDelegate
 
 extension HotelCoordinator: HotelScreenSceneDelegate {
-    func goToRoomScreen() {
-        startRoomScreen()
+    func goToRoomScreen(hotelName: String) {
+        startRoomScreen(hotelName: hotelName)
     }
 }
 
 // MARK: - RoomScreenSceneDelegate
 
 extension HotelCoordinator: RoomScreenSceneDelegate {
-    func goToBookingScreen() {
-        startBookingScreen()
+    func goToBookingScreen(hotelName: String) {
+        startBookingScreen(hotelName: hotelName)
     }
 
     func goBackToHotelScreen() {
