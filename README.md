@@ -1,3 +1,3 @@
 # Hotel
 
-A description of this package.
+Проект сделан в качестве тестового задания на позицию iOS разработчика
