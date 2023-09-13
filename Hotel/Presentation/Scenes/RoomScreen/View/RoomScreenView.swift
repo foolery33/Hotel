@@ -19,32 +19,34 @@ struct RoomScreenView: View {
         ZStack {
             AppColors.white.swiftUIColor
                 .edgesIgnoringSafeArea(.all)
-            ScrollView(showsIndicators: false) {
-                VStack(spacing: 0) {
-                    GeneralNavigationBar(
-                        leftView: {
-                            Button(action: {
-                                viewModel.goBackToHotelScreen()
-                            }, label: {
-                                Image(uiImage: AppImages.chevronLeft)
-                                    .foregroundColor(AppColors.black.swiftUIColor)
-                            })
-                        },
-                        text: viewModel.hotelName
-                    )
-                    LazyVStack(spacing: 0) {
-                        ForEach(viewModel.roomList) { room in
-                            RoomView(
-                                room: room,
-                                onStartBookingScreen: {
-                                    viewModel.goToBookingScreen()
-                                }
-                            )
+            VStack(alignment: .leading, spacing: 0) {
+                GeneralNavigationBar(
+                    leftView: {
+                        Button(action: {
+                            viewModel.goBackToHotelScreen()
+                        }, label: {
+                            Image(uiImage: AppImages.chevronLeft)
+                                .foregroundColor(AppColors.black.swiftUIColor)
+                        })
+                    },
+                    text: viewModel.hotelName
+                )
+                ScrollView(showsIndicators: false) {
+                    VStack(spacing: 0) {
+                        LazyVStack(spacing: 0) {
+                            ForEach(viewModel.roomList) { room in
+                                RoomView(
+                                    room: room,
+                                    onStartBookingScreen: {
+                                        viewModel.goToBookingScreen()
+                                    }
+                                )
+                            }
                         }
+                        Rectangle()
+                            .fill(AppColors.softWhite.swiftUIColor)
+                            .frame(height: AppConstants.spacingTiny)
                     }
-                    Rectangle()
-                        .fill(AppColors.softWhite.swiftUIColor)
-                        .frame(height: 8)
                 }
             }
         }

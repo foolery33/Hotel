@@ -15,7 +15,7 @@ enum BookingScreenAssembly {
         let viewModel = BookingScreenViewModel(
             dependencies: .init(
                 getBookingInformationUseCase: UseCaseProvider.instance.getBookingInformationUseCase,
-                validatePhoneNumberUseCase: UseCaseProvider.instance.validatePhoneNumberUseCase,
+                phoneNumberValidationUseCase: UseCaseProvider.instance.validatePhoneNumberUseCase,
                 emailValidationUseCase: UseCaseProvider.instance.emailValidationUseCase
             )
         )

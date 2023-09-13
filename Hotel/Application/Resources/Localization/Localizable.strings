@@ -29,3 +29,51 @@
 
 "hotel" = "Отель";
 "from_price" = "от %@ ₽";
+"for_tour_with_flight" = "За тур с перелётом";
+"about_hotel" = "Об отеле";
+"convenience" = "Удобства";
+"essentials" = "Самое необходимое";
+"included" = "Что включено";
+"not_included" = "Что не включено";
+"to_room_list" = "К выбору номера";
+
+// MARK: - RoomScreen
+
+"about_room" = "Подробнее о номере";
+"choose_room" = "Выбрать номер";
+
+// MARK: - BookingScreen
+
+"booking" = "Бронирование";
+"flight_from" = "Вылет из";
+"country_city" = "Страна, город";
+"dates" = "Даты";
+"nights_count" = "Кол-во ночей";
+"hotel" = "Отель";
+"room" = "Номер";
+"nutrition" = "Питание";
+"customer_info" = "Информация о покупателе";
+"phone_number" = "Номер телефона";
+"email" = "Почта";
+"confidential_data" = "Эти данные никому не передаются. После оплаты мы вышли чек на указанный вами номер и почту";
+"tourist_with_number" = "%@ турист";
+"add_tourist" = "Добавить туриста";
+"name" = "Имя";
+"surname" = "Фамилия";
+"date_of_birth" = "Дата рождения";
+"citizenship" = "Гражданство";
+"passport_number" = "Номер загранпаспорта";
+"passport_expiration" = "Срок действия загранпаспорта";
+"tour" = "Тур";
+"fuel_charge" = "Топливный сбор";
+"service_charge" = "Сервисный сбор";
+"to_payment" = "К оплате";
+"pay_value" = "Оплатить %@ ₽";
+
+// MARK: - PaymentScreen
+
+"order_is_paid" = "Заказ оплачен";
+"your_order_is_in_work" = "Ваш заказ принят в работу";
+"payment_confirmation" = "Подтверждение заказа №%@ может занять некоторое время (от 1 часа до суток). Как только мы получим ответ от туроператора, вам на почту придет уведомление.";
+"super" = "Супер!";
+

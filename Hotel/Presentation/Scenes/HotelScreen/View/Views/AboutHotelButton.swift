@@ -23,7 +23,7 @@ struct AboutHotelButton: View {
             action: {}
         ) {
             VStack(spacing: 0) {
-                HStack(spacing: 12) {
+                HStack(spacing: AppConstants.spacingSmall) {
                     image
                     VStack(spacing: 0) {
                         HStack(spacing: 0) {

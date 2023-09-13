@@ -30,7 +30,7 @@ struct BookingScreenView: View {
                         Image(uiImage: AppImages.chevronLeft)
                             .foregroundColor(AppColors.black.swiftUIColor)
                     })
-                }, text: "Бронирование")
+                }, text: R.string.localizable.booking())
                 ScrollView(showsIndicators: false) {
                     VStack(alignment: .leading, spacing: 0) {
                         HStack {
@@ -39,10 +39,10 @@ struct BookingScreenView: View {
                         }
                         Rectangle()
                             .fill(AppColors.softGray.swiftUIColor)
-                            .frame(height: 8)
+                            .frame(height: AppConstants.spacingTiny)
                         ZStack {
                             AppColors.softGray.swiftUIColor
-                            VStack(alignment: .leading, spacing: 8) {
+                            VStack(alignment: .leading, spacing: AppConstants.spacingTiny) {
                                 HStack(spacing: 2) {
                                     Image(uiImage: AppImages.star)
                                     Text(
@@ -74,43 +74,35 @@ struct BookingScreenView: View {
                         Group {
                             Rectangle()
                                 .fill(AppColors.softGray.swiftUIColor)
-                                .frame(height: 8)
-                            ZStack {
-                                AppColors.softGray.swiftUIColor
-                                VStack(alignment: .leading, spacing: 16) {
-                                    BookingDataView(dataName: "Вылsdfgsdfgsdfgsdgет из", dataInfo: viewModel.bookingInformation.departure)
-                                    BookingDataView(dataName: "Страна, город", dataInfo: viewModel.bookingInformation.arrivalCountry)
-                                    BookingDataView(dataName: "Даты", dataInfo: "\(viewModel.bookingInformation.tourDateStart)-\(viewModel.bookingInformation.tourDateStop)")
-                                    BookingDataView(dataName: "Кол-во ночей", dataInfo: "\(viewModel.bookingInformation.numberOfNights) ночей")
-                                    BookingDataView(dataName: "Отель", dataInfo: viewModel.hotelName)
-                                    BookingDataView(dataName: "Номер", dataInfo: viewModel.bookingInformation.room)
-                                    BookingDataView(dataName: "Питание", dataInfo: viewModel.bookingInformation.nutrition)
-                                }
-                                .padding(16)
-                                .background(
-                                    RoundedRectangle(cornerRadius: 12)
-                                        .fill(AppColors.white.swiftUIColor)
-                                )
-                            }
+                                .frame(height: AppConstants.spacingTiny)
+                            BookingInfoView(
+                                departure: viewModel.bookingInformation.departure,
+                                arrivalCountry: viewModel.bookingInformation.arrivalCountry,
+                                tourDates: "\(viewModel.bookingInformation.tourDateStart)-\(viewModel.bookingInformation.tourDateStop)",
+                                numberOfNights: "\(viewModel.bookingInformation.numberOfNights) ночей",
+                                hotelName: viewModel.hotelName,
+                                room: viewModel.bookingInformation.room,
+                                nutrition: viewModel.bookingInformation.nutrition
+                            )
                         }
                         Group {
                             Rectangle()
                                 .fill(AppColors.softGray.swiftUIColor)
-                                .frame(height: 8)
+                                .frame(height: AppConstants.spacingTiny)
                             ZStack {
                                 AppColors.softGray.swiftUIColor
                                 VStack(alignment: .leading, spacing: 0) {
-                                    Text("Информация о покупателе")
+                                    Text(R.string.localizable.customer_info())
                                         .font(AppFonts.medium22)
                                         .foregroundColor(AppColors.black.swiftUIColor)
                                         .frame(maxWidth: .infinity, alignment: .leading)
                                     Spacer()
-                                        .frame(height: 20)
-                                    VStack(alignment: .leading, spacing: 8) {
+                                        .frame(height: AppConstants.spacingLarge)
+                                    VStack(alignment: .leading, spacing: AppConstants.spacingTiny) {
                                         GeneralTextField(
                                             text: $viewModel.phoneNumber,
                                             withLabel: true,
-                                            label: "Номер телефона",
+                                            label: R.string.localizable.phone_number(),
                                             verticalPadding: 10,
                                             submitLabel: .next,
                                             onSubmitAction: {
@@ -120,13 +112,10 @@ struct BookingScreenView: View {
                                             isErrorActive: $viewModel.isInvalidPhoneNumber
                                         )
                                         .focused($focusField, equals: .phoneNumber)
-                                        .onChange(of: viewModel.phoneNumber) { newValue in
-                                            viewModel.phoneNumber = viewModel.getValidatedPhoneNumber(newValue)
-                                        }
                                         GeneralTextField(
                                             text: $viewModel.email,
                                             withLabel: true,
-                                            label: "Почта",
+                                            label: R.string.localizable.email(),
                                             verticalPadding: 10,
                                             isAutocorrectionDisabled: true,
                                             autocapitalizationMode: .never,
@@ -141,7 +130,7 @@ struct BookingScreenView: View {
                                             isErrorActive: $viewModel.isInvalidEmail
                                         )
                                         .focused($focusField, equals: .email)
-                                        Text("Эти данные никому не передаются. После оплаты мы вышлем чек на указанный вами номер и почту")
+                                        Text(R.string.localizable.confidential_data())
                                             .font(AppFonts.regular14)
                                             .foregroundColor(AppColors.gray.swiftUIColor)
                                     }
@@ -156,7 +145,7 @@ struct BookingScreenView: View {
                         Group {
                             Rectangle()
                                 .fill(AppColors.softGray.swiftUIColor)
-                                .frame(height: 8)
+                                .frame(height: AppConstants.spacingTiny)
                             ZStack {
                                 AppColors.softGray.swiftUIColor
                                 LazyVStack(alignment: .leading) {
@@ -179,11 +168,11 @@ struct BookingScreenView: View {
                         Group {
                             Rectangle()
                                 .fill(AppColors.softGray.swiftUIColor)
-                                .frame(height: 8)
+                                .frame(height: AppConstants.spacingTiny)
                             ZStack {
                                 AppColors.softGray.swiftUIColor
                                 HStack {
-                                    Text("Добавить туриста")
+                                    Text(R.string.localizable.add_tourist())
                                         .font(AppFonts.medium22)
                                         .foregroundColor(AppColors.black.swiftUIColor)
                                     Spacer()
@@ -217,15 +206,15 @@ struct BookingScreenView: View {
                         Group {
                             Rectangle()
                                 .fill(AppColors.softGray.swiftUIColor)
-                                .frame(height: 8)
+                                .frame(height: AppConstants.spacingTiny)
                             ZStack {
                                 AppColors.softGray.swiftUIColor
-                                VStack(spacing: 16) {
-                                    BookingPaymentView(paymentName: "Тур", paymentAmount: viewModel.bookingInformation.tourPrice)
-                                    BookingPaymentView(paymentName: "Топливный сбор", paymentAmount: viewModel.bookingInformation.fuelCharge)
-                                    BookingPaymentView(paymentName: "Сервисный сбор", paymentAmount: viewModel.bookingInformation.serviceCharge)
+                                VStack(spacing: AppConstants.spacingMedium) {
+                                    BookingPaymentView(paymentName: R.string.localizable.tour(), paymentAmount: viewModel.bookingInformation.tourPrice)
+                                    BookingPaymentView(paymentName: R.string.localizable.fuel_charge(), paymentAmount: viewModel.bookingInformation.fuelCharge)
+                                    BookingPaymentView(paymentName: R.string.localizable.service_charge(), paymentAmount: viewModel.bookingInformation.serviceCharge)
                                     BookingPaymentView(
-                                        paymentName: "К оплате",
+                                        paymentName: R.string.localizable.to_payment(),
                                         paymentAmount: viewModel.bookingInformation.tourPrice +
                                         viewModel.bookingInformation.fuelCharge +
                                         viewModel.bookingInformation.serviceCharge,
@@ -243,20 +232,14 @@ struct BookingScreenView: View {
                         Group {
                             Rectangle()
                                 .fill(AppColors.softGray.swiftUIColor)
-                                .frame(height: 8)
+                                .frame(height: AppConstants.spacingTiny)
                             GeneralButton(
                                 content: {
-                                    Text("Оплатить " + (viewModel.bookingInformation.tourPrice +
-                                                       viewModel.bookingInformation.fuelCharge +
-                                                       viewModel.bookingInformation.serviceCharge).formatToPrice() + " ₽")
+                                    Text(R.string.localizable.pay_value((viewModel.bookingInformation.tourPrice + viewModel.bookingInformation.fuelCharge + viewModel.bookingInformation.serviceCharge).formatToPrice()))
                                         .font(AppFonts.medium16)
                                 },
                                 action: {
-                                    if viewModel.validateAllFields() {
-                                        print("valid")
-                                    } else {
-                                        print("invalid")
-                                    }
+                                    viewModel.validateAllFields()
                                 },
                                 color: AppColors.white.swiftUIColor,
                                 cornerRadius: 15,
@@ -284,7 +267,7 @@ struct BookingScreenView_Previews: PreviewProvider {
             viewModel: BookingScreenViewModel(
                 dependencies: .init(
                     getBookingInformationUseCase: UseCaseProvider.instance.getBookingInformationUseCase,
-                    validatePhoneNumberUseCase: UseCaseProvider.instance.validatePhoneNumberUseCase,
+                    phoneNumberValidationUseCase: UseCaseProvider.instance.validatePhoneNumberUseCase,
                     emailValidationUseCase: UseCaseProvider.instance.emailValidationUseCase
                 )
             )

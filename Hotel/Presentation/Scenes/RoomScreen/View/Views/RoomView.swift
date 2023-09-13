@@ -22,7 +22,7 @@ struct RoomView: View {
         VStack(spacing: 0) {
             Rectangle()
                 .fill(AppColors.softGray.swiftUIColor)
-                .frame(height: 8)
+                .frame(height: AppConstants.spacingTiny)
 
             ZStack {
                 Rectangle()
@@ -32,12 +32,12 @@ struct RoomView: View {
                         imageUrls: room.imageUrls
                     )
                     Spacer()
-                        .frame(height: 8)
+                        .frame(height: AppConstants.spacingTiny)
                     Text(room.name)
                         .font(AppFonts.medium22)
                         .foregroundColor(AppColors.black.swiftUIColor)
                     Spacer()
-                        .frame(height: 8)
+                        .frame(height: AppConstants.spacingTiny)
                     FlowLayout(
                         mode: .scrollable,
                         items: room.peculiarities,
@@ -55,12 +55,12 @@ struct RoomView: View {
                     }
                     .padding(-4)
                     Spacer()
-                        .frame(height: 8)
+                        .frame(height: AppConstants.spacingTiny)
                     Button(action: {
 
                     }, label: {
                         HStack(spacing: 12) {
-                            Text("Подробнее о номере")
+                            Text(R.string.localizable.about_room())
                                 .font(AppFonts.medium16)
                             Image(uiImage: AppImages.chevronRight)
                                 .foregroundColor(AppColors.blue.swiftUIColor)
@@ -77,8 +77,8 @@ struct RoomView: View {
                         )
                     })
                     Spacer()
-                        .frame(height: 16)
-                    HStack(alignment: .firstTextBaseline, spacing: 8) {
+                        .frame(height: AppConstants.spacingMedium)
+                    HStack(alignment: .firstTextBaseline, spacing: AppConstants.spacingTiny) {
                         Text("\(room.price.formatToPrice()) ₽")
                             .font(AppFonts.semibold30)
                             .foregroundColor(AppColors.black.swiftUIColor)
@@ -89,10 +89,10 @@ struct RoomView: View {
                     }
                     Group {
                         Spacer()
-                            .frame(height: 16)
+                            .frame(height: AppConstants.spacingMedium)
                         GeneralButton(
                             content: {
-                                Text("Выбрать номер")
+                                Text(R.string.localizable.choose_room())
                                     .font(AppFonts.medium16)
                             },
                             action: {

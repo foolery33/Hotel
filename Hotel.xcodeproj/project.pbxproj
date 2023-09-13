@@ -28,7 +28,6 @@
 		840AFDA12AA88621003E7045 /* NetworkServiceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840AFDA02AA88621003E7045 /* NetworkServiceProvider.swift */; };
 		840AFDA52AA88A79003E7045 /* RepositoryProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840AFDA42AA88A79003E7045 /* RepositoryProvider.swift */; };
 		840AFDA72AA88BC1003E7045 /* GetHotelUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840AFDA62AA88BC1003E7045 /* GetHotelUseCase.swift */; };
-		840AFDAB2AA8A1ED003E7045 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 840AFDAA2AA8A1ED003E7045 /* Kingfisher */; };
 		840AFDB12AA8AD28003E7045 /* ImageCarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840AFDB02AA8AD28003E7045 /* ImageCarouselView.swift */; };
 		840AFDB72AA8B0F7003E7045 /* ImageCarouselIndicators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840AFDB62AA8B0F7003E7045 /* ImageCarouselIndicators.swift */; };
 		840AFDBD2AA8CB8C003E7045 /* CornerRadiusModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840AFDBC2AA8CB8C003E7045 /* CornerRadiusModifier.swift */; };
@@ -66,14 +65,21 @@
 		84777B772AAE2E76007C149C /* BookingRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84777B762AAE2E76007C149C /* BookingRepositoryImpl.swift */; };
 		84777B792AAE2F3E007C149C /* GetBookingInformationUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84777B782AAE2F3E007C149C /* GetBookingInformationUseCase.swift */; };
 		84777B7D2AAE341C007C149C /* BookingDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84777B7C2AAE341C007C149C /* BookingDataView.swift */; };
+		84B2314C2AB16683002B4A20 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 84B2314B2AB16683002B4A20 /* Kingfisher */; };
 		84B6E1262AB0574600690ED7 /* TouristInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B6E1252AB0574600690ED7 /* TouristInfoView.swift */; };
 		84B6E1292AB0BB2000690ED7 /* CollapsableModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B6E1282AB0BB2000690ED7 /* CollapsableModifier.swift */; };
 		84B6E12D2AB0C2CA00690ED7 /* TouristInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B6E12C2AB0C2CA00690ED7 /* TouristInfoModel.swift */; };
 		84B6E1332AB0DF6A00690ED7 /* BookingPaymentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B6E1322AB0DF6A00690ED7 /* BookingPaymentView.swift */; };
 		84B6E1352AB0E0CE00690ED7 /* Int+extra.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B6E1342AB0E0CE00690ED7 /* Int+extra.swift */; };
 		84B6E1392AB0E6E600690ED7 /* EmailValidationUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B6E1382AB0E6E600690ED7 /* EmailValidationUseCase.swift */; };
+		84B6E13F2AB0F72600690ED7 /* PaymentScreenSceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B6E13E2AB0F72600690ED7 /* PaymentScreenSceneDelegate.swift */; };
+		84B6E1422AB0F74800690ED7 /* PaymentScreenAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B6E1412AB0F74800690ED7 /* PaymentScreenAssembly.swift */; };
+		84B6E1462AB0F77900690ED7 /* PaymentScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B6E1452AB0F77900690ED7 /* PaymentScreenView.swift */; };
+		84B6E1482AB0F7CD00690ED7 /* PaymentScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B6E1472AB0F7CD00690ED7 /* PaymentScreenViewModel.swift */; };
 		84C72C482AAF1E9A0072E0B4 /* GeneralTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C72C472AAF1E9A0072E0B4 /* GeneralTextField.swift */; };
-		84C72C4C2AAF36E90072E0B4 /* ValidatePhoneNumberUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C72C4B2AAF36E90072E0B4 /* ValidatePhoneNumberUseCase.swift */; };
+		84C72C4C2AAF36E90072E0B4 /* PhoneNumberValidationUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C72C4B2AAF36E90072E0B4 /* PhoneNumberValidationUseCase.swift */; };
+		84D026012AB1C33100CECC0D /* BookingInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D026002AB1C33100CECC0D /* BookingInfoView.swift */; };
+		84D026042AB1C81E00CECC0D /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D026032AB1C81E00CECC0D /* AppConstants.swift */; };
 		84D0E8F22AAA08F800EC97C0 /* GeneralButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D0E8F12AAA08F800EC97C0 /* GeneralButton.swift */; };
 		84E1C8452AA71EAA00B15D5B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E1C8442AA71EAA00B15D5B /* AppDelegate.swift */; };
 		84E1C8472AA71EAA00B15D5B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E1C8462AA71EAA00B15D5B /* SceneDelegate.swift */; };
@@ -160,8 +166,14 @@
 		84B6E1322AB0DF6A00690ED7 /* BookingPaymentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingPaymentView.swift; sourceTree = "<group>"; };
 		84B6E1342AB0E0CE00690ED7 /* Int+extra.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+extra.swift"; sourceTree = "<group>"; };
 		84B6E1382AB0E6E600690ED7 /* EmailValidationUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailValidationUseCase.swift; sourceTree = "<group>"; };
+		84B6E13E2AB0F72600690ED7 /* PaymentScreenSceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentScreenSceneDelegate.swift; sourceTree = "<group>"; };
+		84B6E1412AB0F74800690ED7 /* PaymentScreenAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentScreenAssembly.swift; sourceTree = "<group>"; };
+		84B6E1452AB0F77900690ED7 /* PaymentScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentScreenView.swift; sourceTree = "<group>"; };
+		84B6E1472AB0F7CD00690ED7 /* PaymentScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentScreenViewModel.swift; sourceTree = "<group>"; };
 		84C72C472AAF1E9A0072E0B4 /* GeneralTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralTextField.swift; sourceTree = "<group>"; };
-		84C72C4B2AAF36E90072E0B4 /* ValidatePhoneNumberUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidatePhoneNumberUseCase.swift; sourceTree = "<group>"; };
+		84C72C4B2AAF36E90072E0B4 /* PhoneNumberValidationUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneNumberValidationUseCase.swift; sourceTree = "<group>"; };
+		84D026002AB1C33100CECC0D /* BookingInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingInfoView.swift; sourceTree = "<group>"; };
+		84D026032AB1C81E00CECC0D /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
 		84D0E8F12AAA08F800EC97C0 /* GeneralButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralButton.swift; sourceTree = "<group>"; };
 		84E1C8412AA71EAA00B15D5B /* Hotel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hotel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84E1C8442AA71EAA00B15D5B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -191,7 +203,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				840AFDAB2AA8A1ED003E7045 /* Kingfisher in Frameworks */,
+				84B2314C2AB16683002B4A20 /* Kingfisher in Frameworks */,
 				840AFD5E2AA86ED4003E7045 /* Moya in Frameworks */,
 				840AFDC42AA8CFFD003E7045 /* SwiftUIFlowLayout in Frameworks */,
 				84E1C88E2AA74F8B00B15D5B /* RswiftLibrary in Frameworks */,
@@ -366,7 +378,7 @@
 				840AFDA62AA88BC1003E7045 /* GetHotelUseCase.swift */,
 				84777B3C2AADCC33007C149C /* GetRoomUseCase.swift */,
 				84777B782AAE2F3E007C149C /* GetBookingInformationUseCase.swift */,
-				84C72C4B2AAF36E90072E0B4 /* ValidatePhoneNumberUseCase.swift */,
+				84C72C4B2AAF36E90072E0B4 /* PhoneNumberValidationUseCase.swift */,
 				84B6E1382AB0E6E600690ED7 /* EmailValidationUseCase.swift */,
 			);
 			path = UseCases;
@@ -403,6 +415,7 @@
 		840AFDB92AA8CB6F003E7045 /* AppDesign */ = {
 			isa = PBXGroup;
 			children = (
+				84D026022AB1C81500CECC0D /* Enums */,
 				84D0E8F02AAA08EB00EC97C0 /* Views */,
 				840AFDBB2AA8CB7C003E7045 /* Modifiers */,
 			);
@@ -565,6 +578,7 @@
 				84777B7C2AAE341C007C149C /* BookingDataView.swift */,
 				84B6E1252AB0574600690ED7 /* TouristInfoView.swift */,
 				84B6E1322AB0DF6A00690ED7 /* BookingPaymentView.swift */,
+				84D026002AB1C33100CECC0D /* BookingInfoView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -575,6 +589,41 @@
 				84B6E12C2AB0C2CA00690ED7 /* TouristInfoModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		84B6E13B2AB0F70A00690ED7 /* PaymentScreen */ = {
+			isa = PBXGroup;
+			children = (
+				84B6E13D2AB0F71800690ED7 /* View */,
+				84B6E13C2AB0F71200690ED7 /* ViewModel */,
+				84B6E13E2AB0F72600690ED7 /* PaymentScreenSceneDelegate.swift */,
+				84B6E1412AB0F74800690ED7 /* PaymentScreenAssembly.swift */,
+			);
+			path = PaymentScreen;
+			sourceTree = "<group>";
+		};
+		84B6E13C2AB0F71200690ED7 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				84B6E1472AB0F7CD00690ED7 /* PaymentScreenViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		84B6E13D2AB0F71800690ED7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				84B6E1452AB0F77900690ED7 /* PaymentScreenView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		84D026022AB1C81500CECC0D /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				84D026032AB1C81E00CECC0D /* AppConstants.swift */,
+			);
+			path = Enums;
 			sourceTree = "<group>";
 		};
 		84D0E8F02AAA08EB00EC97C0 /* Views */ = {
@@ -667,6 +716,7 @@
 		84E1C86B2AA728B800B15D5B /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				84B6E13B2AB0F70A00690ED7 /* PaymentScreen */,
 				84777B512AAE0583007C149C /* BookingScreen */,
 				845E76392AAB1B3C00968CBB /* RoomScreen */,
 				84E1C86C2AA7296C00B15D5B /* HotelScreen */,
@@ -809,8 +859,8 @@
 			packageProductDependencies = (
 				84E1C88D2AA74F8B00B15D5B /* RswiftLibrary */,
 				840AFD5D2AA86ED4003E7045 /* Moya */,
-				840AFDAA2AA8A1ED003E7045 /* Kingfisher */,
 				840AFDC32AA8CFFD003E7045 /* SwiftUIFlowLayout */,
+				84B2314B2AB16683002B4A20 /* Kingfisher */,
 			);
 			productName = Hotel;
 			productReference = 84E1C8412AA71EAA00B15D5B /* Hotel.app */;
@@ -843,8 +893,8 @@
 			packageReferences = (
 				84E1C88C2AA74F8B00B15D5B /* XCRemoteSwiftPackageReference "R.swift" */,
 				840AFD5C2AA86ED4003E7045 /* XCRemoteSwiftPackageReference "Moya" */,
-				840AFDA92AA8A1ED003E7045 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 				840AFDC22AA8CFFD003E7045 /* XCRemoteSwiftPackageReference "swiftui-flow-layout" */,
+				84B2314A2AB16683002B4A20 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = 84E1C8422AA71EAA00B15D5B /* Products */;
 			projectDirPath = "";
@@ -876,9 +926,11 @@
 			files = (
 				84777B302AADC9AE007C149C /* RoomServiceImpl.swift in Sources */,
 				84777B3B2AADCAD7007C149C /* RoomMapper.swift in Sources */,
+				84D026012AB1C33100CECC0D /* BookingInfoView.swift in Sources */,
 				845E763B2AAB1B5C00968CBB /* RoomScreenSceneDelegate.swift in Sources */,
 				84E1C8672AA7283000B15D5B /* AppCoordinator.swift in Sources */,
 				840AFD8F2AA87F5B003E7045 /* HotelMapper.swift in Sources */,
+				84B6E13F2AB0F72600690ED7 /* PaymentScreenSceneDelegate.swift in Sources */,
 				84777B2A2AAD932B007C149C /* RoomResponse.swift in Sources */,
 				845E76402AAB1BDD00968CBB /* RoomScreenViewModel.swift in Sources */,
 				84777B692AAE2909007C149C /* BookingDomain.swift in Sources */,
@@ -902,9 +954,11 @@
 				840AFD862AA87ECF003E7045 /* Mapper.swift in Sources */,
 				840AFD962AA8826F003E7045 /* HotelRepositoryImpl.swift in Sources */,
 				84777B5D2AAE0702007C149C /* BookingScreenAssembly.swift in Sources */,
+				84B6E1482AB0F7CD00690ED7 /* PaymentScreenViewModel.swift in Sources */,
 				84777B602AAE2843007C149C /* BookingService.swift in Sources */,
 				84E1C8962AA74FFF00B15D5B /* UIColor+extra.swift in Sources */,
 				84777B532AAE05B4007C149C /* BookingScreenSceneDelegate.swift in Sources */,
+				84B6E1422AB0F74800690ED7 /* PaymentScreenAssembly.swift in Sources */,
 				840AFD652AA86F1C003E7045 /* AppError.swift in Sources */,
 				840AFD6E2AA877B8003E7045 /* NetworkClientProvider.swift in Sources */,
 				84777B5B2AAE0658007C149C /* BookingScreenView.swift in Sources */,
@@ -916,7 +970,7 @@
 				84E1C8762AA72E3000B15D5B /* HotelScreenAssembly.swift in Sources */,
 				840AFD802AA87D88003E7045 /* HotelResponse.swift in Sources */,
 				84777B452AADCF28007C149C /* RoomListMapper.swift in Sources */,
-				84C72C4C2AAF36E90072E0B4 /* ValidatePhoneNumberUseCase.swift in Sources */,
+				84C72C4C2AAF36E90072E0B4 /* PhoneNumberValidationUseCase.swift in Sources */,
 				84E1C8622AA7278700B15D5B /* Coordinator.swift in Sources */,
 				84E1C87D2AA74C6700B15D5B /* AppColors.swift in Sources */,
 				84777B4F2AADF7B5007C149C /* GeneralNavigationBar.swift in Sources */,
@@ -935,10 +989,12 @@
 				84E1C8A92AA86A4F00B15D5B /* BaseNetworkService.swift in Sources */,
 				840AFD6B2AA8771E003E7045 /* BaseTargetType.swift in Sources */,
 				84777B332AADC9D5007C149C /* RoomEndpoint.swift in Sources */,
+				84D026042AB1C81E00CECC0D /* AppConstants.swift in Sources */,
 				84E1C8742AA72B6D00B15D5B /* HotelScreenView.swift in Sources */,
 				84E1C8982AA7503300B15D5B /* Color+UIColor.swift in Sources */,
 				84E1C8722AA72A0B00B15D5B /* HotelScreenViewModel.swift in Sources */,
 				84C72C482AAF1E9A0072E0B4 /* GeneralTextField.swift in Sources */,
+				84B6E1462AB0F77900690ED7 /* PaymentScreenView.swift in Sources */,
 				840AFD7B2AA87CF8003E7045 /* HotelService.swift in Sources */,
 				845E76462AAB1F1200968CBB /* RoomService.swift in Sources */,
 				84777B792AAE2F3E007C149C /* GetBookingInformationUseCase.swift in Sources */,
@@ -1180,20 +1236,20 @@
 				kind = branch;
 			};
 		};
-		840AFDA92AA8A1ED003E7045 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
-			requirement = {
-				branch = master;
-				kind = branch;
-			};
-		};
 		840AFDC22AA8CFFD003E7045 /* XCRemoteSwiftPackageReference "swiftui-flow-layout" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/globulus/swiftui-flow-layout.git";
 			requirement = {
 				kind = upToNextMajorVersion;
 				minimumVersion = 1.0.0;
+			};
+		};
+		84B2314A2AB16683002B4A20 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				branch = master;
+				kind = branch;
 			};
 		};
 		84E1C88C2AA74F8B00B15D5B /* XCRemoteSwiftPackageReference "R.swift" */ = {
@@ -1212,15 +1268,15 @@
 			package = 840AFD5C2AA86ED4003E7045 /* XCRemoteSwiftPackageReference "Moya" */;
 			productName = Moya;
 		};
-		840AFDAA2AA8A1ED003E7045 /* Kingfisher */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 840AFDA92AA8A1ED003E7045 /* XCRemoteSwiftPackageReference "Kingfisher" */;
-			productName = Kingfisher;
-		};
 		840AFDC32AA8CFFD003E7045 /* SwiftUIFlowLayout */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 840AFDC22AA8CFFD003E7045 /* XCRemoteSwiftPackageReference "swiftui-flow-layout" */;
 			productName = SwiftUIFlowLayout;
+		};
+		84B2314B2AB16683002B4A20 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 84B2314A2AB16683002B4A20 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
 		};
 		84E1C88D2AA74F8B00B15D5B /* RswiftLibrary */ = {
 			isa = XCSwiftPackageProductDependency;

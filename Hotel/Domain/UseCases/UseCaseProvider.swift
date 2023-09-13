@@ -35,7 +35,7 @@ final class UseCaseProvider {
         .init(bookingRepository: repositoryProvider.bookingRepository)
     }()
 
-    lazy var validatePhoneNumberUseCase: ValidatePhoneNumberUseCase = {
+    lazy var validatePhoneNumberUseCase: PhoneNumberValidationUseCase = {
         .init()
     }()
 

@@ -45,7 +45,7 @@ struct ImageCarouselView: View {
                     imageCount: imageUrls.count
                 )
                 Spacer()
-                    .frame(height: 8)
+                    .frame(height: AppConstants.spacingTiny)
             }
         }
         .frame(height: 257)

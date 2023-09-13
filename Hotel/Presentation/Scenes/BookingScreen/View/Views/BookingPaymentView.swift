@@ -17,6 +17,8 @@ struct BookingPaymentView: View {
     public var paymentDataFont: Font = AppFonts.regular16
     public var paymentDataColor: Color = AppColors.black.swiftUIColor
 
+    // MARK: - Body
+
     var body: some View {
         HStack {
             Text(paymentName)
@@ -29,6 +31,8 @@ struct BookingPaymentView: View {
         }
     }
 }
+
+// MARK: - Preview
 
 struct BookingPaymentView_Previews: PreviewProvider {
     static var previews: some View {

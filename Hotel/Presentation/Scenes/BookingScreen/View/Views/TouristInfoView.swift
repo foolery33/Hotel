@@ -27,12 +27,14 @@ struct TouristInfoView: View {
 
     @FocusState private var focusField: FocusField?
 
+    // MARK: - Body
+
     var body: some View {
         ZStack {
             AppColors.softGray.swiftUIColor
-            VStack(alignment: .leading, spacing: 20) {
+            VStack(alignment: .leading, spacing: AppConstants.spacingLarge) {
                 HStack(spacing: 0) {
-                    Text("Турист \(touristNumber)")
+                    Text(R.string.localizable.tourist_with_number(String(touristNumber)))
                         .font(AppFonts.medium22)
                         .foregroundColor(AppColors.black.swiftUIColor)
                     Spacer()
@@ -52,11 +54,11 @@ struct TouristInfoView: View {
                     })
                 }
                 .frame(height: 58)
-                VStack(spacing: 8) {
+                VStack(spacing: AppConstants.spacingTiny) {
                     GeneralTextField(
                         text: $name,
                         withLabel: true,
-                        label: "Имя",
+                        label: R.string.localizable.name(),
                         verticalPadding: 10,
                         submitLabel: .next,
                         onSubmitAction: {
@@ -68,7 +70,7 @@ struct TouristInfoView: View {
                     GeneralTextField(
                         text: $surname,
                         withLabel: true,
-                        label: "Фамилия",
+                        label: R.string.localizable.surname(),
                         verticalPadding: 10,
                         submitLabel: .next,
                         onSubmitAction: {
@@ -79,7 +81,7 @@ struct TouristInfoView: View {
                     .focused($focusField, equals: .surname)
                     GeneralTextField(
                         text: $dateOfBirth,
-                        placeholder: "Дата рождения",
+                        placeholder: R.string.localizable.date_of_birth(),
                         submitLabel: .next,
                         onSubmitAction: {
                             focusField = .citizenship
@@ -89,7 +91,7 @@ struct TouristInfoView: View {
                     .focused($focusField, equals: .dateOfBirth)
                     GeneralTextField(
                         text: $citizenship,
-                        placeholder: "Гражданство",
+                        placeholder: R.string.localizable.citizenship(),
                         submitLabel: .next,
                         onSubmitAction: {
                             focusField = .passportNumber
@@ -99,7 +101,7 @@ struct TouristInfoView: View {
                     .focused($focusField, equals: .citizenship)
                     GeneralTextField(
                         text: $passportNumber,
-                        placeholder: "Номер загранпаспорта",
+                        placeholder: R.string.localizable.passport_number(),
                         submitLabel: .next,
                         onSubmitAction: {
                             focusField = .passportExpiration
@@ -109,7 +111,7 @@ struct TouristInfoView: View {
                     .focused($focusField, equals: .passportNumber)
                     GeneralTextField(
                         text: $passportExpiration,
-                        placeholder: "Срок действия загранпаспорта",
+                        placeholder: R.string.localizable.passport_expiration(),
                         submitLabel: .done,
                         onSubmitAction: {
                             focusField = nil
@@ -118,7 +120,7 @@ struct TouristInfoView: View {
                     )
                     .focused($focusField, equals: .passportExpiration)
                     Spacer()
-                        .frame(height: 8)
+                        .frame(height: AppConstants.spacingTiny)
                 }
             }
             .modifier(
@@ -132,6 +134,8 @@ struct TouristInfoView: View {
         }
     }
 }
+
+// MARK: - Preview
 
 struct TouristInfoView_Previews: PreviewProvider {
     static let touristNumber: Int = 1

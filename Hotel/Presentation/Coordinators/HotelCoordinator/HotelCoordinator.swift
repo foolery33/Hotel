@@ -12,7 +12,7 @@ final class HotelCoordinator: BaseNavigationCoordinator {
     // MARK: - Start
 
     override func start() {
-        startBookingScreen(hotelName: "Steigenberger Makadi")
+        startHotelScreen()
     }
 
     // MARK: - Private Methods
@@ -42,11 +42,19 @@ final class HotelCoordinator: BaseNavigationCoordinator {
     }
 
     private func startPaymentScreen() {
+        let viewController = PaymentScreenAssembly.make(
+            with: self
+        )
 
+        navigationController.pushViewController(viewController, animated: true)
     }
 
     private func returnFromScreen() {
         navigationController.popViewController(animated: true)
+    }
+
+    private func returnToRoot() {
+        navigationController.popToRootViewController(animated: true)
     }
 }
 
@@ -79,5 +87,17 @@ extension HotelCoordinator: BookingScreenSceneDelegate {
 
     func goBackToRoomScreen() {
         returnFromScreen()
+    }
+}
+
+// MARK: - PaymentScreenSceneDelegate
+
+extension HotelCoordinator: PaymentScreenSceneDelegate {
+    func goBackToPaymentScreen() {
+        returnFromScreen()
+    }
+
+    func goBackToRootScreen() {
+        returnToRoot()
     }
 }

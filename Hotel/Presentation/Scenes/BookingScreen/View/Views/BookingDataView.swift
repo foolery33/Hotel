@@ -26,7 +26,7 @@ struct BookingDataView: View {
                 .multilineTextAlignment(.leading)
                 .fixedSize(horizontal: false, vertical: true)
             Spacer()
-                .frame(width: 16)
+                .frame(width: AppConstants.spacingMedium)
             Text(dataInfo)
                 .font(AppFonts.medium16)
                 .foregroundColor(AppColors.black.swiftUIColor)

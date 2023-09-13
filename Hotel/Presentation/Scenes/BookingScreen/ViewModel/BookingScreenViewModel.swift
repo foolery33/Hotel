@@ -20,7 +20,7 @@ final class BookingScreenViewModel: ObservableObject {
     @Published private(set) var error: String = ""
     @Published private(set) var isLoading: Bool = false
 
-    @Published public var phoneNumber: String = "+7 (***) ***-**-**"
+    @Published public var phoneNumber: String = "+7"
     @Published public var isInvalidPhoneNumber: Bool = false
 
     @Published public var email: String = ""
@@ -52,10 +52,6 @@ final class BookingScreenViewModel: ObservableObject {
         sceneDelegate?.goBackToRoomScreen()
     }
 
-    public func getValidatedPhoneNumber(_ number: String) -> String {
-        return dependencies.validatePhoneNumberUseCase.invoke(number)
-    }
-
     public func validateEmail() {
         if !dependencies.emailValidationUseCase.invoke(email) {
             isInvalidEmail = true
@@ -64,7 +60,7 @@ final class BookingScreenViewModel: ObservableObject {
         }
     }
 
-    public func validateAllFields() -> Bool {
+    public func validateAllFields() {
         if !isInvalidEmail && !email.isEmpty && !isInvalidPhoneNumber && !phoneNumber.isEmpty {
             var isFoundEmptyField: Bool = false
             for (index, tourist) in touristList.enumerated() {
@@ -75,14 +71,15 @@ final class BookingScreenViewModel: ObservableObject {
                 }
             }
             if !isFoundEmptyField {
-                return true
+                goToPaymentScreen()
             }
-            return false
         }
         if !isInvalidEmail && email.isEmpty {
             isInvalidEmail = true
         }
-        return false
+        if !isInvalidPhoneNumber && phoneNumber == "+7" {
+            isInvalidPhoneNumber = true
+        }
     }
 
     // MARK: - Private Methods
@@ -102,6 +99,10 @@ final class BookingScreenViewModel: ObservableObject {
         }
     }
 
+    private func goToPaymentScreen() {
+        sceneDelegate?.goToPaymentScreen()
+    }
+
     private func initTextFieldsObserving() {
         initPhoneNumberTextObserving()
         initEmailTextObserving()
@@ -119,17 +120,22 @@ final class BookingScreenViewModel: ObservableObject {
         }.store(in: &subscribers)
     }
 
-    @discardableResult private func validateFields() -> Bool {
+   private func validateFields() {
         if !email.isEmpty && !dependencies.emailValidationUseCase.invoke(email) {
             isInvalidEmail = true
-            return false
         } else {
             if !email.isEmpty && dependencies.emailValidationUseCase.invoke(email) {
                 isInvalidEmail = false
             }
         }
-        
-        return true
+
+        if !(phoneNumber == "+7") && !dependencies.phoneNumberValidationUseCase.invoke(phoneNumber) {
+            isInvalidPhoneNumber = true
+        } else {
+            if !(phoneNumber == "+7") && dependencies.phoneNumberValidationUseCase.invoke(phoneNumber) {
+                isInvalidPhoneNumber = false
+            }
+        }
     }
 
 }
@@ -139,7 +145,7 @@ final class BookingScreenViewModel: ObservableObject {
 extension BookingScreenViewModel {
     struct Dependencies {
         let getBookingInformationUseCase: GetBookingInformationUseCase
-        let validatePhoneNumberUseCase: ValidatePhoneNumberUseCase
+        let phoneNumberValidationUseCase: PhoneNumberValidationUseCase
         let emailValidationUseCase: EmailValidationUseCase
     }
 }

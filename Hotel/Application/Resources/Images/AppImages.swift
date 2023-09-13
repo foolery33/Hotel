@@ -15,4 +15,5 @@ enum AppImages {
     static let tickSquare = R.image.tickSquare()!
     static let emojiHappy = R.image.emojiHappy()!
     static let plus = R.image.plus()!
+    static let confetti = R.image.confetti()!
 }
